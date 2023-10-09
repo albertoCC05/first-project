@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MyFirstScript : MonoBehaviour
@@ -12,5 +13,25 @@ public class MyFirstScript : MonoBehaviour
 
     private bool isgameover = false;
 
-    private string playername = "Banano_Z";
+    private string playername = "Alberto";
+    
+    
+
+    private void Start()
+    {
+        //comentarios en consola
+        Debug.Log("buenas tardes por la mañana");
+        Debug.Log($"El nombre de el jugador es:{playername}");
+        Debug.Log(speed);
+        Debug.Log(age);
+        Debug.Log(isgameover);
+        //operaciones, operaciones aritmeticas
+
+        
+
+    }
+
+
+
+
 }
