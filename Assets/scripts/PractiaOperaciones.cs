@@ -11,8 +11,8 @@ public class PractiaOperaciones : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log($"tengo [{num3 % 3} monedas");
-        Debug.Log($"tengo [{num4 % 3} monedas");
+        Debug.Log($"tengo {num3 % 3} monedas");
+        Debug.Log($"tengo {num4 % 3} monedas");
 
 
 
