@@ -87,20 +87,51 @@ public class Entregable3 : MonoBehaviour
 
         if (months == 1 || months == 3 || months == 5 || months == 7 || months == 9 || months == 11)
         {
-            if (days <= 31 && days > 0)
+            if (days <= 31 && days > 0 && years>0)
             {
                 Debug.Log($" {days} / {months} / {years} is a valid date");
             }
-
+            else
+            {
+                Debug.Log(" this is not a valid date");
+            }
 
         }
         else if (months == 2)
         {
-            if(days)
+            if(days<=28 && days >0 && years>0)
+            {
+                Debug.Log($" {days} / {months} / {years} is a valid date");
+            }
+            else
+            {
+                Debug.Log(" this is not a valid date");
+            }
+
+        }
+        else if (months == 4|| months ==6 || months ==8 || months ==10 || months  ==12)
+        {
+            if (days <= 30 && days > 0 && years > 0)
+            {
+                Debug.Log($" {days} / {months} / {years} is a valid date"); 
+            
+            }
+            else
+            {
+                Debug.Log(" this is not a valid date");
+            }
+        }
+        else
+        {
+            Debug.Log("this is not a valid date");
         }
 
+        //ejercicio 6
 
+        if (years%12 ==0)
+        {
 
+        }
 
 
 
