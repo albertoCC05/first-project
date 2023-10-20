@@ -17,13 +17,26 @@ public class Entregable3 : MonoBehaviour
 
     [SerializeField] private string grade = "A";
 
-    //variables ejercicio 5
+    //variables ejercicio 5, 6 y 7
 
     [SerializeField] private int days = 0; 
     [SerializeField] private int months = 0;
     [SerializeField] private int years = 0;
 
+    // variable ejercicio 8
 
+    [SerializeField] private string weekDay;
+
+    //variables ejercicio 9
+
+    [SerializeField] private int age = 0;
+    [SerializeField] private string memberRank;
+
+    // varables ejercicio 10
+
+    [SerializeField] private float angle1;
+    [SerializeField] private float angle2;
+    [SerializeField] private float angle3;
 
 
     private void Start()
@@ -130,14 +143,236 @@ public class Entregable3 : MonoBehaviour
 
         if (years%12 ==0)
         {
-
+            Debug.Log("tu horoscopo chino es cabra");
+        }
+        else if (years%12 ==1)
+        {
+            Debug.Log("tu horoscopo chino es mono");
+        }
+        else if (years % 12 == 2)
+        {
+            Debug.Log("tu horoscopo chino es gallo");
+        }
+        else if (years % 12 == 3)
+        {
+            Debug.Log("tu horoscopo chino es perro");
+        }
+        else if (years % 12 == 4)
+        {
+            Debug.Log("tu horoscopo chino es cerdo");
+        }
+        else if (years % 12 == 5)
+        {
+            Debug.Log("tu horoscopo chino es rata");
+        }
+        else if (years % 12 == 6)
+        {
+            Debug.Log("tu horoscopo chino es buey");
+        }
+        else if (years % 12 == 7)
+        {
+            Debug.Log("tu horoscopo chino es tigre");
+        }
+        else if (years % 12 == 8)
+        {
+            Debug.Log("tu horoscopo chino es conejo");
+        }
+        else if (years % 12 == 9)
+        {
+            Debug.Log("tu horoscopo chino es dragon");
+        }
+        else if (years % 12 == 10)
+        {
+            Debug.Log("tu horoscopo chino es conejo");
+        }
+        else 
+        {
+            Debug.Log("tu horoscopo chino es caballo");
         }
 
+        //ejercicio 7
+
+        if (months==1 && days>=1 && days<20)
+        {
+
+            Debug.Log("tu horoscopo es capricornio");
+        }
+        else if (months == 1 && days >= 20 && days < 32)
+        {
+
+            Debug.Log("tu horoscopo es acuario");
+        }
+        else if (months == 2 && days >= 1 && days < 19)
+        {
+
+            Debug.Log("tu horoscopo es acuario");
+        }
+        else if (months == 2 && days >= 19 && days < 29)
+        {
+
+            Debug.Log("tu horoscopo es piscis");
+        }
+        else if (months == 3 && days >= 1 && days < 21)
+        {
+
+            Debug.Log("tu horoscopo es piscis");
+        }
+        else if (months == 3 && days >=21  && days < 32)
+        {
+
+            Debug.Log("tu horoscopo es aries");
+        }
+        else if (months == 4 && days >= 1 && days < 20)
+        {
+
+            Debug.Log("tu horoscopo es aries");
+        }
+        else if (months == 4 && days >= 21 && days < 31)
+        {
+
+            Debug.Log("tu horoscopo es tauro");
+        }
+        else if (months == 5 && days >= 1 && days < 21)
+        {
+
+            Debug.Log("tu horoscopo es tauro");
+        }
+        else if (months == 5 && days >= 21 && days < 32)
+        {
+
+            Debug.Log("tu horoscopo es geminis");
+        }
+        else if (months == 6 && days >= 1 && days < 21)
+        {
+
+            Debug.Log("tu horoscopo es geminis");
+        }
+        else if (months == 6 && days >= 21 && days < 31)
+        {
+
+            Debug.Log("tu horoscopo es cancer");
+        }
+        else if (months == 7 && days >= 1 && days < 23)
+        {
+
+            Debug.Log("tu horoscopo es cancer");
+        }
+        else if (months == 7 && days >= 23 && days < 32)
+        {
+
+            Debug.Log("tu horoscopo es leo");
+        }
+        else if (months == 8 && days >= 1 && days < 23)
+        {
+
+            Debug.Log("tu horoscopo es leo");
+        }
+        else if (months == 8 && days >= 23 && days <32 )
+        {
+
+            Debug.Log("tu horoscopo es virgo");
+        }
+        else if (months == 9 && days >= 1 && days < 23)
+        {
+
+            Debug.Log("tu horoscopo es virgo");
+        }
+        else if (months == 9 && days >= 23 && days < 31)
+        {
+
+            Debug.Log("tu horoscopo es libra");
+        }
+        else if (months == 10 && days >= 1 && days < 23)
+        {
+
+            Debug.Log("tu horoscopo es libra");
+        }
+        else if (months == 10 && days >= 23 && days < 32)
+        {
+
+            Debug.Log("tu horoscopo es escorpio");
+        }
+        else if (months == 11 && days >= 1 && days < 22)
+        {
+
+            Debug.Log("tu horoscopo es escorpio");
+        }
+        else if (months == 11 && days >=22 && days < 31)
+        {
+
+            Debug.Log("tu horoscopo es sagitario");
+        }
+        else if (months == 12 && days >= 1 && days < 22)
+        {
+
+            Debug.Log("tu horoscopo es sagitario");
+        }
+        else if (months == 12 && days >= 22 && days < 32)
+        {
+
+            Debug.Log("tu horoscopo es capricornio");
+        }
+
+        //ejercicio 8
+
+        if (weekDay == "monday" || weekDay == "tuesday" || weekDay == "wednesday" || weekDay =="thursdat" || weekDay == "friday")
+        {
+            Debug.Log("is not weekwnd");
+        }
+        else
+        {
+            Debug.Log("is weekend");
+        }
+
+       //ejercicio 9
+
+        if (age>=18 && age<65)
+        {
+            if(memberRank=="gold")
+            {
+                Debug.Log("you have  75% of discount");
+            }
+           else if (memberRank == "silver")
+            {
+                Debug.Log("you have  50% of discount");
+            }
+            else if (memberRank == "bronze")
+            {
+                Debug.Log("you have  25% of discount");
+            }
+
+        }
+        else if (age > 65)
+        {
+            if (memberRank == "gold")
+            {
+                Debug.Log("you have  50% of discount");
+            }
+            else if (memberRank == "silver")
+            {
+                Debug.Log("you have  25% of discount");
+            }
+            else if (memberRank == "bronze")
+            {
+                Debug.Log("you have  15% of discount");
+            }
+        }
+        else if (age < 18)
+        {
+            Debug.Log("you cant buy in these shop due to you are a minor");
+        }
+
+        //ejercicio 10
 
 
-
-
-
+        if (angle1 + angle2 + angle3 == 180)
+        {
+            Debug.Log("theese angles can be the internal angles of a triangle");
+        }
+        if (angle1 + angle2 + angle3 == 180)
+        {
+            Debug.Log("theese angles can't be the internal angles of a triangle");
+        }
 
 
 
