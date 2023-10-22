@@ -143,51 +143,51 @@ public class Entregable3 : MonoBehaviour
 
         if (years%12 ==0)
         {
-            Debug.Log("tu horoscopo chino es cabra");
+            Debug.Log("tu horoscopo chino es mono");
         }
         else if (years%12 ==1)
         {
-            Debug.Log("tu horoscopo chino es mono");
+            Debug.Log("tu horoscopo chino es gallo");
         }
         else if (years % 12 == 2)
         {
-            Debug.Log("tu horoscopo chino es gallo");
+            Debug.Log("tu horoscopo chino es perro");
         }
         else if (years % 12 == 3)
         {
-            Debug.Log("tu horoscopo chino es perro");
+            Debug.Log("tu horoscopo chino es cerdo");
         }
         else if (years % 12 == 4)
         {
-            Debug.Log("tu horoscopo chino es cerdo");
+            Debug.Log("tu horoscopo chino es rata");
         }
         else if (years % 12 == 5)
         {
-            Debug.Log("tu horoscopo chino es rata");
+            Debug.Log("tu horoscopo chino es buey");
         }
         else if (years % 12 == 6)
         {
-            Debug.Log("tu horoscopo chino es buey");
+            Debug.Log("tu horoscopo chino es tigre");
         }
         else if (years % 12 == 7)
         {
-            Debug.Log("tu horoscopo chino es tigre");
+            Debug.Log("tu horoscopo chino es conejo");
         }
         else if (years % 12 == 8)
         {
-            Debug.Log("tu horoscopo chino es conejo");
+            Debug.Log("tu horoscopo chino es dragon");
         }
         else if (years % 12 == 9)
         {
-            Debug.Log("tu horoscopo chino es dragon");
+            Debug.Log("tu horoscopo chino es serpiente");
         }
         else if (years % 12 == 10)
         {
-            Debug.Log("tu horoscopo chino es conejo");
+            Debug.Log("tu horoscopo chino es caballo");
         }
         else 
         {
-            Debug.Log("tu horoscopo chino es caballo");
+            Debug.Log("tu horoscopo chino es cabra");
         }
 
         //ejercicio 7
