@@ -321,8 +321,57 @@ public class Entrega4 : MonoBehaviour
 
     //ejercicio 6
 
+    private void SubstractYear ()
+    {
+        year3 = year3 - 1;
+    }
+    
+    
+    private void SubstractMonth ()
+    {
+        month3 = month3 - 1;
+    }
+
+
     private void SubstractADay()
     {
+        day3 = day3 - 1;
+
+        if (month3 == 1 || month3 == 2 || month3 == 4 || month3 == 6 || month3 == 8 || month3 == 9 || month3 == 11)
+        {
+            if (day3 < 1)
+            {
+                SubstractMonth();
+                day3 = 31;
+            }
+            
+
+        }
+        else if (month3 == 3)
+        {
+            if (day3 < 1)
+            {
+                SubstractMonth();
+                day3 = 28;
+            }
+        }
+        else if (month == 12 || month == 5 || month == 7 || month == 10)
+        {
+            if (day3 < 1)
+            {
+                SubstractMonth();
+                day3 = 30;
+            }
+
+        }
+
+        if (month3 < 1)
+        {
+            SubstractYear();
+            month3 = 12;
+        }
+
+        Debug.Log($" the date is {day3} / {month3} / {year3}");
 
     }
 
@@ -356,7 +405,7 @@ public class Entrega4 : MonoBehaviour
 
         //6
 
-
+        SubstractADay();
 
         // 7
 
