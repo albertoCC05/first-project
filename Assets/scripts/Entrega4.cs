@@ -25,8 +25,10 @@ public class Entrega4 : MonoBehaviour
     [SerializeField] private int day2;
     [SerializeField] private int month2;
     [SerializeField] private int year2;
-    private bool calculateDate1 = false;
-    private bool calculateDate2 = false;
+    [SerializeField] private int day3;
+    [SerializeField] private int month3;
+    [SerializeField] private int year3;
+
 
     //ejercicio 8
 
@@ -317,6 +319,13 @@ public class Entrega4 : MonoBehaviour
 
     }
 
+    //ejercicio 6
+
+    private void SubstractADay()
+    {
+
+    }
+
 
 
 
@@ -343,11 +352,11 @@ public class Entrega4 : MonoBehaviour
 
         //5
 
-       
+        addADay();
 
         //6
 
- 
+
 
         // 7
 
@@ -365,9 +374,9 @@ public class Entrega4 : MonoBehaviour
 
         EvenOdd();
 
-        // 5 again
+     
 
-        addADay();
+        
 
 
     }
