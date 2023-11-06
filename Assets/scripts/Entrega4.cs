@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Security;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Entrega4 : MonoBehaviour
@@ -142,114 +144,11 @@ public class Entrega4 : MonoBehaviour
 
     // ejercicio 5
 
-    private void AddDay()
-    {
-
-        
-        day2= day2 + 1;
-
-        if (month2 == 1 || month2 == 3 || month2 == 5 || month2 == 7 || month2 == 8 || month2 == 10 || month2 == 12)
-        {
-            if (day2 > 31)
-            {
-                month2 = month2 + 1;
-                day2 = 1;
-                calculateDate2 = true;
-
-            }
-        }
-       else if (month2 == 2)
-        {
-            if (day2 > 28)
-            {
-                month2 = month2 + 1;
-                day2 = 1;
-                calculateDate2 = true;
-
-            }
-        }
-       else if (month2 == 4 || month2 == 6 || month2 == 9 || month2 == 11)
-        {
-            if (day2 > 30)
-            {
-                month2 = month2 + 1;
-                day2 = 1;
-                calculateDate2 = true;
-
-            }
-        }
-
-        if (month> 12)
-        {
-            month2 = 1;
-            year2 = year2 + 1;
-            calculateDate2 = true;
-            
-        }
-        else
-        {
-            calculateDate2 = true;
-        }
-
-        if (calculateDate2 == true) 
-        {
-            Debug.Log($" the date is {day2} / {month2} / {year2}");
-        }
-        
-
-
-    }
+    
 
     // ejercicio 6
 
-    private void SubstractDay()
-    {
 
-
-        day2 = day2 - 1;
-
-        if (month2 == 1 || month2 == 3 || month2 == 5 || month2 == 7  || month2 == 10 || month2 == 12)
-        {
-            if (day2 < 1)
-            {
-                month2 = month2 - 1;
-                day2 = 30;
-                calculateDate1 = true;
-
-            }
-        }
-        else if (month2 == 4 || month2 == 6 || month2 == 9 || month2 == 11|| month2 == 8|| month2==2)
-        {
-            if (day2 < 1)
-            {
-                month2 = month2 - 1;
-                day2 = 31;
-                calculateDate1 = true;
-            }
-        }
-
-        if (month > 1)
-        {
-            month2 = 12;
-            year2 = year2 - 1;
-            calculateDate1 = true;
-        }
-        else
-        {
-            calculateDate1 = true;
-        }
-
-        if (calculateDate1 == true)
-        {
-            Debug.Log($" the date is {day2} / {month2} / {year2}");
-        }
-        
-       
-
-
-
-
-    }
 
     // ejercicio 7
 
@@ -328,7 +227,7 @@ public class Entrega4 : MonoBehaviour
         {
             Debug.Log(" your grade is a C");
         }
-        else
+        else if (grade >=0 && grade <5)
         {
             Debug.Log(" your grade is a D");
         }
@@ -346,6 +245,76 @@ public class Entrega4 : MonoBehaviour
         {
             Debug.Log($" {num1} is odd");
         }
+    }
+
+    //ejercicio 5 otra vez
+
+    private void AddAMonth()
+    {
+
+        month2 = month2 + 1;
+
+    }
+    private void AddAYear()
+    {
+
+        
+        
+         year2 = year2 + 1;
+        
+
+
+    }
+
+    
+    private void addADay()
+    {
+        day2 = day2 + 1;
+
+        
+
+        if (month2 == 1 || month2 == 3 || month2 == 5 || month2 == 7 || month2 == 8 || month2 == 10 || month2 == 12)
+        {
+            if (day2 > 31)
+            {
+                day2 = 1;
+                AddAMonth();
+
+                if (month2 > 12)
+                {
+                    AddAYear();
+                    month2 = 1;
+
+                }
+                
+            }
+        }
+        else if (month2 == 2)
+        {
+            if (day2 > 28)
+            {
+
+                day2 = 1;
+                AddAMonth();
+                
+
+
+
+            }
+        }
+        else if (month2 == 4 || month2 == 6 || month2 == 9 || month2 == 11)
+        {
+            if (day2 > 30)
+            {
+                day2 = 1;
+                AddAMonth();
+
+              
+
+            }
+        }
+        Debug.Log($" the date is {day2} / {month2} / {year2}");
+
     }
 
 
@@ -374,11 +343,11 @@ public class Entrega4 : MonoBehaviour
 
         //5
 
-        AddDay();
+       
 
         //6
 
-        SubstractDay();
+ 
 
         // 7
 
@@ -396,7 +365,9 @@ public class Entrega4 : MonoBehaviour
 
         EvenOdd();
 
+        // 5 again
 
+        addADay();
 
 
     }
